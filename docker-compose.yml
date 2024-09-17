@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: currency-converter
+    image: currency-converter
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/currency-converter/src
+    ports:
+      - "3000:3000"
