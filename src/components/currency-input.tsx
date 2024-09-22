@@ -17,7 +17,7 @@ function CurrencyInput({ handleConvert }: any) {
     };
 
     return (
-        <div>
+        <div className="mt-4">
             <div className='flex gap-4'>
                 <Input
                     placeholder="Enter amount..."
