@@ -18,11 +18,17 @@ function CurrencyConversionList({ rates, input } :any) {
 
     return (
         <div className='w-full'>
-            {Object.entries(filteredRates).map(([key, value]) => (<div className='mt-1 md:mt-4'>
+            {Object.entries(filteredRates).map(([key, value]) => (<div className='md:mt-2'>
                 <table className='w-full text-left text-lg'>
-                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <td className='py-1'>
-                            <ReactCountryFlag countryCode={FlagLabels[key]} svg />
+                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 bg-gray-200">
+                        <td className='py-1 px-2'>
+                            <ReactCountryFlag 
+                                style={{
+                                    fontSize: '2em',
+                                    lineHeight: '2em'
+                                }}
+                                countryCode={FlagLabels[key]} svg 
+                            />
                         </td>
                         <td className='px-6 py-1'>
                             {CurrencyLabels[key]}
