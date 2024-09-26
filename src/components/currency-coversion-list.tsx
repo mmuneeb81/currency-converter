@@ -2,6 +2,7 @@ import React from 'react';
 import { CurrencyLabels } from '../constants/currencyLabels';
 import { CurrencyInputs } from '../constants/currencyInputs';
 import ReactCountryFlag from "react-country-flag"
+import { FlagLabels } from '../constants/flagLabels';
 
 function CurrencyConversionList({ rates, input } :any) {
     const inputRate: number = +(input.amount/rates[input.sourceCurrency]);
@@ -21,7 +22,7 @@ function CurrencyConversionList({ rates, input } :any) {
                 <table className='w-full text-left text-lg'>
                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <td className='py-1'>
-                            <ReactCountryFlag countryCode="US" svg />
+                            <ReactCountryFlag countryCode={FlagLabels[key]} svg />
                         </td>
                         <td className='px-6 py-1'>
                             {CurrencyLabels[key]}
