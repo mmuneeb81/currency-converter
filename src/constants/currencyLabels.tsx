@@ -5,5 +5,13 @@ export const CurrencyLabels: { [key: string]: string } = {
     'JPY': 'Japanese Yen',
     'THB': 'Thai Bhat',
     'TRY': 'Turkish Lira',
-    'INR': 'Indian Rupee'
+    'INR': 'Indian Rupee',
+    'EUR': 'Euro',
+    'CNY': 'Chinese Yuan',
+    'SAR': 'Saudi Riyal',
+    'AED': 'UAE Dirham',
+    'MYR': 'Malaysian Ringit',
+    'SGD': 'Singapore Dollar',
+    'GBP': 'British Pound',
+    'RUB': 'Russian Ruble'
 }

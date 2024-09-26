@@ -1,6 +1,7 @@
 import React from 'react';
 import { CurrencyLabels } from '../constants/currencyLabels';
 import { CurrencyInputs } from '../constants/currencyInputs';
+import ReactCountryFlag from "react-country-flag"
 
 function CurrencyConversionList({ rates, input } :any) {
     const inputRate: number = +(input.amount/rates[input.sourceCurrency]);
@@ -16,9 +17,12 @@ function CurrencyConversionList({ rates, input } :any) {
 
     return (
         <div className='w-full'>
-            {Object.entries(filteredRates).map(([key, value]) => (<div className='mt-4'>
-                <table className='w-full text-sm text-left text-lg'>
+            {Object.entries(filteredRates).map(([key, value]) => (<div className='mt-1 md:mt-4'>
+                <table className='w-full text-left text-lg'>
                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <td className='py-1'>
+                            <ReactCountryFlag countryCode="US" svg />
+                        </td>
                         <td className='px-6 py-1'>
                             {CurrencyLabels[key]}
                         </td>

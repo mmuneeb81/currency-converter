@@ -17,8 +17,8 @@ function CurrencyInput({ handleConvert }: any) {
     };
 
     return (
-        <div className="mt-4">
-            <div className='flex gap-4'>
+        <div className="-mt-2 md:mt-4 w-full">
+            <div className='flex gap-2 md:gap-4 flex-col md:flex-row w-full'>
                 <Input
                     placeholder="Enter amount..."
                     inputMode="numeric"
@@ -31,7 +31,7 @@ function CurrencyInput({ handleConvert }: any) {
                     onChange={({ detail }) => setCurrencyType({label: detail.selectedOption.label || '', value: detail.selectedOption.value || ''})}
                     options={CurrencyInputs}
                 />
-                <Button variant="primary" onClick={onConvert}>Convert</Button>
+                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded mb-4' onClick={onConvert}>Convert</button>
             </div>
         </div>
     );
