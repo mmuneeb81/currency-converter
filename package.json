@@ -2,6 +2,7 @@
   "name": "currency-converter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mmuneeb81.github.io/currency-converter/",
   "dependencies": {
     "@cloudscape-design/components": "^3.0.758",
     "@cloudscape-design/global-styles": "^1.0.32",
@@ -25,7 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [
